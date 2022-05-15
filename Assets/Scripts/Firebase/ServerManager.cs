@@ -1,4 +1,3 @@
-/*
 using System; // EventSystem 사용 목적
 using System.Linq; // Aggregate 사용 목적
 using System.Collections;
@@ -69,8 +68,6 @@ public class ServerManager : MonoBehaviour
             }
         });
 
-        // 파이어베이스 로딩이 다 되면 다음 씬으로 전환
-        SceneManager.LoadSceneAsync("Auth");
     }
 
     //(추가) 입력받은 레퍼런스의 경로를 분석하고 잘라서 지정한 데이터베이스 상의 경로에 접근할 수 있도록 함
@@ -120,7 +117,8 @@ public class ServerManager : MonoBehaviour
 
     // 주어진 데이터를 JSON 형태로 직렬화하여 데이터베이스에 데이터를 씀
     public void PostObject<T>(string path, T obj, Action callback, Action<AggregateException> fallback){
-        PostJSON(path, StringSerializationAPI.Serialize(typeof(T),obj), callback, Debug.Log);
+        PostJSON(path, JsonUtility.ToJson(obj), callback, Debug.Log);
+        //PostJSON(path, StringSerializationAPI.Serialize(typeof(T),obj), callback, Debug.Log);
     }
 
     // 주어진 JSON값을 "고유 Key값 형태로" 데이터 목록에 추가함
@@ -144,7 +142,8 @@ public class ServerManager : MonoBehaviour
 
     // 주어진 데이터를 JSON 값으로 직렬화하여 데이터 목록에 추가함
     public void PushObject<T>(string path, T obj, Action callback, Action<AggregateException> fallback){
-        PushJSON(path, StringSerializationAPI.Serialize(typeof(T),obj), callback, Debug.Log);
+        PushJSON(path, JsonUtility.ToJson(obj), callback, Debug.Log);
+        //PushJSON(path, StringSerializationAPI.Serialize(typeof(T),obj), callback, Debug.Log);
     }
 
     // 데이터베이스에서 가져온 JSON 값을 역직렬화하여 원하는 데이터의 형태로 가져온 뒤 callback에 넣어줌 
@@ -153,7 +152,8 @@ public class ServerManager : MonoBehaviour
     // 이를 형식 매개 변수로 받은 변수형으로 전환한 뒤 callback에 매개변수로 넣어주어 실행하는 매커니즘
     public void GetObject<T>(string path, Action<T> callback, Action<AggregateException> fallback){
         GetJSON(path, json => {
-            callback((T)StringSerializationAPI.Deserialize(typeof(T),json.GetRawJsonValue()));
+            callback((T)JsonUtility.FromJson<T>(json.GetRawJsonValue()));
+            //callback((T)StringSerializationAPI.Deserialize(typeof(T),json.GetRawJsonValue()));
         }, Debug.Log);
     }
 
@@ -302,7 +302,8 @@ public class ServerManager : MonoBehaviour
     // Authenticaton 관련 메소드
     //(추가) 매개변수로 받은 user를 데이터베이스 상의 직접 지정한 경로에 작성함
     public void PostUser(User user, Action callback, Action<AggregateException> fallback){
-        var messageJSON = StringSerializationAPI.Serialize(typeof(User),user);
+        var messageJSON = JsonUtility.ToJson(user);
+        //var messageJSON = StringSerializationAPI.Serialize(typeof(User),user);
         reference.Child($"users/{AuthManager.manager.GetUserId()}").SetRawJsonValueAsync(messageJSON).ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted) fallback(task.Exception);
@@ -316,8 +317,7 @@ public class ServerManager : MonoBehaviour
         reference.Child($"users/{AuthManager.manager.GetUserId()}").GetValueAsync().ContinueWith(task =>
         {
             if (task.IsCanceled || task.IsFaulted) fallback(task.Exception);
-            else callback(StringSerializationAPI.Deserialize(typeof(User),task.Result.GetRawJsonValue()) as User);
+            else callback(JsonUtility.FromJson<User>(task.Result.GetRawJsonValue()) as User);//callback(StringSerializationAPI.Deserialize(typeof(User),task.Result.GetRawJsonValue()) as User);
         });
     }
 }
-*/

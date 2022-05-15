@@ -81,6 +81,12 @@ public class ImageTrack : MonoBehaviour
         }
         if(Input.touchCount>0){
             touchPos=Input.GetTouch(0).position;
+            /*
+            ServerManager.manager.PushObject($"games/touched/", 0,
+            () => {
+                Debug.Log("touched");
+            }, Debug.Log);
+            */
             if(raymanager.Raycast(touchPos,hits,TrackableType.PlaneWithinPolygon)){//터치 시 PlanePolygon 찾음
                 var hitPos=hits[0].pose;
                 if(!isSpawned){
