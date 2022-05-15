@@ -31,7 +31,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "1.15.12",
+      "version": "1.15.17",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -65,7 +65,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-      "version": "1.2.4",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -152,11 +152,11 @@
       }
     },
     "com.unity.xr.arcore": {
-      "version": "4.1.9",
+      "version": "4.1.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.arsubsystems": "4.1.9",
+        "com.unity.xr.arsubsystems": "4.1.10",
         "com.unity.xr.management": "4.0.1",
         "com.unity.modules.androidjni": "1.0.0",
         "com.unity.modules.unitywebrequest": "1.0.0"
@@ -164,18 +164,18 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arfoundation": {
-      "version": "4.1.9",
+      "version": "4.1.10",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.arsubsystems": "4.1.9",
+        "com.unity.xr.arsubsystems": "4.1.10",
         "com.unity.xr.management": "4.0.1",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.arsubsystems": {
-      "version": "4.1.9",
+      "version": "4.1.10",
       "depth": 1,
       "source": "registry",
       "dependencies": {

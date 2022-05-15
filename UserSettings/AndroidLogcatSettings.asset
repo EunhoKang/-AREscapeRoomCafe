@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "R3CM80B4SLB",
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
-        "name": "com.DefaultCompany.ImageTracking",
-        "processId": 11327,
+        "name": "com.Eunho.AREscapeRoomCafe",
+        "processId": 11663,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,18 +12,36 @@
             "deviceId": "R3CM80B4SLB",
             "name": "com.blizzard.wtcg.hearthstone",
             "processId": 29596,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.DefaultCompany.ImageTracking",
             "processId": 9676,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.DefaultCompany.ImageTracking",
             "processId": 11327,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 7408,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 8167,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 11663,
             "exited": false
         }
     ],
