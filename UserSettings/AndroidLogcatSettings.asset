@@ -3,45 +3,57 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
         "name": "com.Eunho.AREscapeRoomCafe",
-        "processId": 11764,
+        "processId": 22555,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CM80B4SLB",
+            "name": "com.microsoft.launcher",
+            "processId": 29881,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 3376,
+            "processId": 3310,
             "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 4638,
+            "processId": 14359,
             "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 6279,
+            "processId": 15419,
             "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 7739,
+            "processId": 18343,
             "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 9910,
+            "processId": 19587,
             "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 11764,
+            "processId": 20368,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 22555,
             "exited": false
         }
     ],
@@ -95,7 +107,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "",
+    "m_Filter": "로그인",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }
