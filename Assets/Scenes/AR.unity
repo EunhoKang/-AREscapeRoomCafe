@@ -570,6 +570,24 @@ MonoBehaviour:
   Child: {fileID: 0}
   DrivingSurfaceManager: {fileID: 939129062}
   CurrentPlane: {fileID: 0}
+--- !u!1 &1651275592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 156014509053936120, guid: c0ffd6e32415c45f59e277fe7314020d, type: 3}
+  m_PrefabInstance: {fileID: 1651275589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1651275593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651275592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.75220174, y: 0.08828788, z: 0.75454}
+  m_Center: {x: -0.0023376443, y: 0.0023377407, z: -0.0011684746}
 --- !u!1 &1716525549
 GameObject:
   m_ObjectHideFlags: 0
