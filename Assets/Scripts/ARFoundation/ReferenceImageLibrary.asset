@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5135428354803883585
+  m_GuidHigh: 6479317105976855700
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5725242134241760389
+      m_GuidHigh: 2953857598159917710
+    m_SerializedTextureGuid:
+      m_GuidLow: 12003369779275548509
+      m_GuidHigh: 1553333747897326634
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: A
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4797595738161191520
+      m_GuidHigh: 6351468000280377784
+    m_SerializedTextureGuid:
+      m_GuidLow: 12408715559097033507
+      m_GuidHigh: 5391846684327939290
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: B
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5662339430395102150
+      m_GuidHigh: 9983391924348334270
+    m_SerializedTextureGuid:
+      m_GuidLow: 5743318877212134245
+      m_GuidHigh: 6391657541863105912
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: C
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5404929565174971863
+      m_GuidHigh: 2877036500229087633
+    m_SerializedTextureGuid:
+      m_GuidLow: 3716842600150704415
+      m_GuidHigh: 375489815863779529
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: D
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5163480653322809234
+      m_GuidHigh: 16943484545829884080
+    m_SerializedTextureGuid:
+      m_GuidLow: 13818335105324445672
+      m_GuidHigh: 6664613688349292136
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: E
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4934418487021583128
+      m_GuidHigh: 4001850900922426246
+    m_SerializedTextureGuid:
+      m_GuidLow: 13723720995539267332
+      m_GuidHigh: 2713158983136138827
+    m_Size: {x: 1, y: 0.9}
+    m_SpecifySize: 1
+    m_Name: F
+    m_Texture: {fileID: 0}
