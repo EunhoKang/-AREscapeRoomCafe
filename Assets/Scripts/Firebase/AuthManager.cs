@@ -11,8 +11,8 @@ public class AuthManager : MonoBehaviour
 {
     public static AuthManager manager=null;
     Firebase.FirebaseApp app;
-    Firebase.Auth.FirebaseAuth auth;
-    Firebase.Auth.FirebaseUser user;
+    public Firebase.Auth.FirebaseAuth auth;
+    public Firebase.Auth.FirebaseUser user;
 
     void Awake()
     { 

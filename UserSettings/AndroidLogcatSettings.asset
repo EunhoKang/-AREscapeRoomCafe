@@ -3,23 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
         "name": "com.Eunho.AREscapeRoomCafe",
-        "processId": 24925,
+        "processId": 31423,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 20368,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 22555,
-            "exited": true
-        },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
@@ -42,12 +30,30 @@
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
             "processId": 23791,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
             "processId": 24925,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.microsoft.launcher",
+            "processId": 31714,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.google.android.youtube",
+            "processId": 27803,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 31423,
             "exited": false
         }
     ],

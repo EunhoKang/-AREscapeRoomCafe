@@ -1,5 +1,5 @@
-using System; // EventSystem 사용 목적
-using System.Linq; // Aggregate 사용 목적
+using System; 
+using System.Linq; 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +11,15 @@ using Newtonsoft.Json;
 
 public class RealTimeDataManager : MonoBehaviour
 {
+    public static RealTimeDataManager manager=null;
     DatabaseReference reference;
+
+    void Awake()
+    { 
+        if(manager==null)manager=this;
+        else if(manager!=this)Destroy(gameObject);
+        DontDestroyOnLoad(this);
+    }
     
     void Start()
     {
@@ -22,7 +30,7 @@ public class RealTimeDataManager : MonoBehaviour
         //WriteUserData("2", "cccc");
         //WriteUserData("3", "dddd");
         //ReadUserData();
-        var sample=new SampleData("eunho", new List<string>(){"a","aa","b","bb"});
+        var sample=new SampleData("eunho", new List<double>(){1,2});
         PostObject<List<SampleData>>($"users/", new List<SampleData>(){sample,sample},
             () => {}, Debug.Log);
         

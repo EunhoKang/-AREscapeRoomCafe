@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class SampleData
 {
     public string playerName;
-    public List<string> dataSet=new List<string>();
-    public SampleData(string _name, List<string> _set){
+    public List<double> dataSet=new List<double>();
+    public SampleData(string _name, List<double> _set){
         playerName=_name;
-        dataSet=new List<string>(_set);
+        dataSet=new List<double>(_set);
     } 
 }
