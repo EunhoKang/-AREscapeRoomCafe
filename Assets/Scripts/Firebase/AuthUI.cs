@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Linq;
 using TMPro;
 public class AuthUI : MonoBehaviour
 {
@@ -17,17 +18,20 @@ public class AuthUI : MonoBehaviour
     public void SignIn(){
         AuthManager.manager.SignIn(emailField.text,passField.text,()=>{
             Debug.Log(emailField.text + " 로 로그인 하셨습니다.");
-            RealTimeDataManager.manager.PostObject<SampleData>($"users/{AuthManager.manager.auth.CurrentUser.Email}", 
-            new SampleData("eunho", new List<double>(){1,2}),() => {}, Debug.Log);
         },Debug.Log);
-        //SceneManager.LoadSceneAsync("AR");
     }
     public void Sample_RankUpdate(){
-        var sample=new SampleData(AuthManager.manager.auth.CurrentUser.DisplayName, new List<double>(){0.1f,0.2f});
-        RealTimeDataManager.manager.PostObject<SampleData>($"rank/{AuthManager.manager.auth.CurrentUser.Email}/", sample,
-            () => {}, Debug.Log);
+        RealTimeDataManager.manager.ReadUserData();
+        var sample=new SampleData(AuthManager.manager.auth.CurrentUser.Email, new List<double>(){0.1,0.2});
+        if(RealTimeDataManager.manager.dataList.FindIndex(x=>x.playerName==sample.playerName)>=0){
+            RealTimeDataManager.manager.dataList.RemoveAll(x=>x.playerName==sample.playerName);
+        }
+        RealTimeDataManager.manager.dataList.Add(sample);
+        RealTimeDataManager.manager.PostObject<List<SampleData>>($"users", 
+            RealTimeDataManager.manager.dataList,() => {}, Debug.Log);
+        SceneManager.LoadSceneAsync("AR");
     }
     public void Sample_ReadRank(){
-        //
+        RealTimeDataManager.manager.ReadUserData();
     }
 }

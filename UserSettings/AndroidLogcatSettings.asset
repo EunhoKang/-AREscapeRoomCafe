@@ -3,69 +3,63 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
         "name": "com.Eunho.AREscapeRoomCafe",
-        "processId": 15163,
+        "processId": 14198,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 25155,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 17171,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 19219,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 23791,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 24925,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
             "name": "com.microsoft.launcher",
-            "processId": 31714,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.google.android.youtube",
-            "processId": 27803,
+            "processId": 18772,
             "exited": false
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 31423,
+            "processId": 7424,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 8923,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 10124,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 11270,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 12739,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.kakao.talk",
+            "processId": 2707,
             "exited": false
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 31921,
+            "processId": 13695,
             "exited": false
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 15163,
+            "processId": 14198,
             "exited": false
         }
     ],

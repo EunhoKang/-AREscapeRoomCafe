@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 public class RealTimeDataManager : MonoBehaviour
 {
     public static RealTimeDataManager manager=null;
+    public List<SampleData> dataList=new List<SampleData>();
     DatabaseReference reference;
 
     void Awake()
@@ -24,6 +25,12 @@ public class RealTimeDataManager : MonoBehaviour
     void Start()
     {
         reference = FirebaseDatabase.DefaultInstance.RootReference;
+        ReadUserData();
+        GetObject<List<SampleData>>($"users/", args =>
+        {
+            dataList=new List<SampleData>(args);
+            foreach(var data in dataList)Debug.Log(data.playerName);
+        }, Debug.Log);
     }
 
     public DatabaseReference GetReferenceFromPath(string path){
@@ -31,7 +38,7 @@ public class RealTimeDataManager : MonoBehaviour
         return splitPath.Aggregate(reference, (current, child) => current.Child(child));
     }
  
-    void ReadUserData()
+    public void ReadUserData()
     {
         FirebaseDatabase.DefaultInstance.GetReference("users")
             .GetValueAsync().ContinueWithOnMainThread(task =>
@@ -43,17 +50,18 @@ public class RealTimeDataManager : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
+                dataList=JsonConvert.DeserializeObject<List<SampleData>>(task.Result.GetRawJsonValue());
                 // Do something with snapshot...
+                Debug.Log("----------------------------------------------------");
             for ( int i = 0; i < snapshot.ChildrenCount; i++)
-                Debug.Log(snapshot.Child(i.ToString()).Child("username").Value);
-              
+                Debug.Log(snapshot.Child(i.ToString()).Child("playerName").Value);
             }
         });
     }
  
-    void WriteUserData(string userId, string username)
+    public void WriteUserData(string path,string userId, string username)
     {
-        reference.Child("users").Child(userId).Child("username").SetValueAsync(username);
+        reference.Child(path).Child(userId).Child("username").SetValueAsync(username);
     }
 
     public void PostJSON(string path, string json, Action callback, Action<AggregateException> fallback){
