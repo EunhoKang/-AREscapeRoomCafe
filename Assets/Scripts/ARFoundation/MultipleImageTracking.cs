@@ -9,17 +9,19 @@ public class MultipleImageTracking : MonoBehaviour
     public List<string> imageNames;
     public GameObject[] Objs;
     private Dictionary<string, GameObject> spawnedObjs = new Dictionary<string, GameObject>();
+    private Dictionary<string, int> spawnedInt = new Dictionary<string, int>();
     private ARTrackedImageManager ARTrackedImageManager;
+    public ARUI arui;
 
     private void Awake()
     {
         ARTrackedImageManager = GetComponent<ARTrackedImageManager>();
         var i=0;
-        foreach(GameObject prefab in Objs)
+        foreach(GameObject obj in Objs)
         {
-            GameObject clone = Instantiate(prefab);
-            spawnedObjs.Add(imageNames[i++], clone);
-            clone.SetActive(false);
+            spawnedObjs.Add(imageNames[i], obj);
+            spawnedInt.Add(imageNames[i],i++);
+            obj.SetActive(false);
         }
     }
 
@@ -54,12 +56,15 @@ public class MultipleImageTracking : MonoBehaviour
     private void UpdateImage(ARTrackedImage trackedImage)
     {
         GameObject trackedObject = spawnedObjs[trackedImage.referenceImage.name];
+        int idx=spawnedInt[trackedImage.referenceImage.name];
 
         if(trackedImage.trackingState == TrackingState.Tracking)
         {
-            trackedObject.transform.position = trackedImage.transform.position;
-            trackedObject.transform.rotation = trackedImage.transform.rotation;
-            trackedObject.SetActive(true);
+            if(!arui.inventory[idx]){
+                trackedObject.SetActive(true);
+                arui.InventoryChange(idx);
+                if(trackedImage.referenceImage.name=="F")arui.GameEnd(true);
+            }
         }
         else
         {

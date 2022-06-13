@@ -39,16 +39,6 @@ public class AuthUI : MonoBehaviour
         SetProfile();
     }
     public void Sample_RankUpdate(){
-        /*
-        RealTimeDataManager.manager.ReadUserData();
-        var sample=new SampleData(AuthManager.manager.auth.CurrentUser.Email, 123.45f);
-        if(RealTimeDataManager.manager.dataList.FindIndex(x=>x.playerName==sample.playerName)>=0){
-            RealTimeDataManager.manager.dataList.RemoveAll(x=>x.playerName==sample.playerName);
-        }
-        RealTimeDataManager.manager.dataList.Add(sample);
-        RealTimeDataManager.manager.PostObject<List<SampleData>>($"users", 
-            RealTimeDataManager.manager.dataList,() => {}, Debug.Log);
-            */
         SceneManager.LoadSceneAsync("AR");
     }
     public void Sample_ReadRank(){
