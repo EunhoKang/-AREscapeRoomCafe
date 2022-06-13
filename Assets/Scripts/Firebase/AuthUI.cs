@@ -7,10 +7,25 @@ using System.Linq;
 using TMPro;
 public class AuthUI : MonoBehaviour
 {
+    [SerializeField] GameObject logo;
+    [SerializeField] Image logoImage;
+    [SerializeField] GameObject login;
     [SerializeField] TMP_InputField emailField;
     [SerializeField] TMP_InputField passField;
     [SerializeField] TextMeshProUGUI rank;
     [SerializeField] TextMeshProUGUI profile;
+    private void Start() {
+        StartCoroutine(StartCor());
+    }
+    IEnumerator StartCor(){
+        for(float i=0;i<=1;i+=0.1f){
+            logoImage.color=new Color(1,1,1,i);
+            yield return new WaitForSeconds(0.04f);
+        }
+        yield return new WaitForSeconds(0.8f);
+        logo.SetActive(false);
+        login.SetActive(true);
+    }
     public void SignUp(){
         AuthManager.manager.SignUp(emailField.text,passField.text,()=>{
             Debug.Log(emailField.text + "로 회원가입\n");
@@ -24,6 +39,7 @@ public class AuthUI : MonoBehaviour
         SetProfile();
     }
     public void Sample_RankUpdate(){
+        /*
         RealTimeDataManager.manager.ReadUserData();
         var sample=new SampleData(AuthManager.manager.auth.CurrentUser.Email, 123.45f);
         if(RealTimeDataManager.manager.dataList.FindIndex(x=>x.playerName==sample.playerName)>=0){
@@ -32,6 +48,7 @@ public class AuthUI : MonoBehaviour
         RealTimeDataManager.manager.dataList.Add(sample);
         RealTimeDataManager.manager.PostObject<List<SampleData>>($"users", 
             RealTimeDataManager.manager.dataList,() => {}, Debug.Log);
+            */
         SceneManager.LoadSceneAsync("AR");
     }
     public void Sample_ReadRank(){

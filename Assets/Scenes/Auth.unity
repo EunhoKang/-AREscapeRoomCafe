@@ -1158,6 +1158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3212edf5f542f774fb7b34319c2ee7d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  logo: {fileID: 0}
+  logoImage: {fileID: 0}
+  login: {fileID: 0}
   emailField: {fileID: 2110434057}
   passField: {fileID: 2102133492}
   rank: {fileID: 0}
@@ -2198,10 +2201,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7346195755570105266, guid: 6781d0ae58b7f0446a0ec442f312f427, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7346195756390465699, guid: 6781d0ae58b7f0446a0ec442f312f427, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2289,10 +2288,6 @@ PrefabInstance:
     - target: {fileID: 7346195756390465703, guid: 6781d0ae58b7f0446a0ec442f312f427, type: 3}
       propertyPath: m_Name
       value: AuthUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7346195756812756482, guid: 6781d0ae58b7f0446a0ec442f312f427, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6781d0ae58b7f0446a0ec442f312f427, type: 3}
