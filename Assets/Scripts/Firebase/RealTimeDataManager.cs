@@ -26,11 +26,6 @@ public class RealTimeDataManager : MonoBehaviour
     {
         reference = FirebaseDatabase.DefaultInstance.RootReference;
         ReadUserData();
-        GetObject<List<SampleData>>($"users/", args =>
-        {
-            dataList=new List<SampleData>(args);
-            foreach(var data in dataList)Debug.Log(data.playerName);
-        }, Debug.Log);
     }
 
     public DatabaseReference GetReferenceFromPath(string path){
@@ -45,17 +40,21 @@ public class RealTimeDataManager : MonoBehaviour
         {
             if (task.IsFaulted)
             {
-                // Handle the error...
+                Debug.Log("?????????????????????");
             }
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
-                dataList=JsonConvert.DeserializeObject<List<SampleData>>(task.Result.GetRawJsonValue());
                 // Do something with snapshot...
-                Debug.Log("----------------------------------------------------");
-            for ( int i = 0; i < snapshot.ChildrenCount; i++)
-                Debug.Log(snapshot.Child(i.ToString()).Child("playerName").Value);
+                List<SampleData> lists=new List<SampleData>();
+                for ( int i = 0; i < snapshot.ChildrenCount; i++){
+                    var sample=new SampleData(snapshot.Child(i.ToString()).Child("playerName").Value.ToString(),
+                    Double.Parse(snapshot.Child(i.ToString()).Child("data").Value.ToString()));
+                    lists.Add(sample);
+                }
+                dataList=lists;
             }
+
         });
     }
  
