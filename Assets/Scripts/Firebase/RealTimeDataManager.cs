@@ -24,20 +24,6 @@ public class RealTimeDataManager : MonoBehaviour
     void Start()
     {
         reference = FirebaseDatabase.DefaultInstance.RootReference;
- 
-        //WriteUserData("0", "aaaa");
-        //WriteUserData("1", "bbbb");
-        //WriteUserData("2", "cccc");
-        //WriteUserData("3", "dddd");
-        //ReadUserData();
-        var sample=new SampleData("eunho", new List<double>(){1,2});
-        PostObject<List<SampleData>>($"users/", new List<SampleData>(){sample,sample},
-            () => {}, Debug.Log);
-        
-        GetObject<List<SampleData>>($"users/", args =>
-        {
-            Debug.Log(args[0].playerName);
-        }, Debug.Log);
     }
 
     public DatabaseReference GetReferenceFromPath(string path){

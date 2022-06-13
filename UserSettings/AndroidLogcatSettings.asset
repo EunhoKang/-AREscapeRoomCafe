@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
         "name": "com.Eunho.AREscapeRoomCafe",
-        "processId": 31423,
+        "processId": 15163,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -54,6 +54,18 @@
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
             "processId": 31423,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 31921,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 15163,
             "exited": false
         }
     ],
