@@ -5,10 +5,14 @@ AREscapeRoomCafe
 안녕하세요!<br>
 AREscapeRoomCafe는 방탈출 카페에 새로운 인터렉션을 통해 사용자 편의와 놀라운 경험을 선사하는 증강 현실 프로젝트입니다.<br>
 Firebase를 통해 당신의 탈출 시간도 기록됩니다.
+<br>
 
-Screen Shot
+Screen Shot<br>
+![webpage](screenshot1.jpg)
 
+![webpage](screenshot2.jpg)
 
+<br>
 How To Use
 
 -씬은 Auth, AR로 나뉩니다.<br>
