@@ -20,7 +20,8 @@ public class MultipleImageTracking : MonoBehaviour
         foreach(GameObject obj in Objs)
         {
             spawnedObjs.Add(imageNames[i], obj);
-            spawnedInt.Add(imageNames[i],i++);
+            spawnedInt.Add(imageNames[i],i);
+            i++;
             obj.SetActive(false);
         }
     }
@@ -57,7 +58,7 @@ public class MultipleImageTracking : MonoBehaviour
     {
         GameObject trackedObject = spawnedObjs[trackedImage.referenceImage.name];
         int idx=spawnedInt[trackedImage.referenceImage.name];
-
+        Debug.Log(idx);
         if(trackedImage.trackingState == TrackingState.Tracking)
         {
             if(!arui.inventory[idx]){
@@ -65,10 +66,6 @@ public class MultipleImageTracking : MonoBehaviour
                 arui.InventoryChange(idx);
                 if(trackedImage.referenceImage.name=="F")arui.GameEnd(true);
             }
-        }
-        else
-        {
-            trackedObject.SetActive(false);
         }
     }
 }

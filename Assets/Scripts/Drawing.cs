@@ -83,15 +83,4 @@ public class Drawing : MonoBehaviour
             }
         }
     }
-
-    public void oneStepBack()
-    {
-        //wowo.transform.childCount
-        //Destroy(cam.transform.GetChild(childCount-1));
-        Debug.Log(wowo.transform.childCount);
-        Debug.Log(wowo.transform.GetChild(2));
-        
-        Destroy(wowo.transform.GetChild(2));
-    }
-
 }

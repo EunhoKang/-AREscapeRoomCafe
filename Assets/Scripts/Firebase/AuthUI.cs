@@ -20,7 +20,7 @@ public class AuthUI : MonoBehaviour
     IEnumerator StartCor(){
         for(float i=0;i<=1;i+=0.1f){
             logoImage.color=new Color(1,1,1,i);
-            yield return new WaitForSeconds(0.04f);
+            yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(0.8f);
         logo.SetActive(false);
@@ -53,7 +53,7 @@ public class AuthUI : MonoBehaviour
     public void SetProfile(){
         SampleData s=RealTimeDataManager.manager.dataList.Find(x=>x.playerName==AuthManager.manager.auth.CurrentUser.Email);
         string txt="";
-        txt=$"Email:\t{s.playerName}\n최고기록:\t{s.data}";
+        txt=$"Email:\t{s.playerName}\n최고기록:\t{string.Format("{0:0.###}",s.data)}";
         profile.text=txt;
     }
 }

@@ -3,63 +3,51 @@
     "m_SelectedPackage": {
         "deviceId": "R3CM80B4SLB",
         "name": "com.Eunho.AREscapeRoomCafe",
-        "processId": 27523,
+        "processId": 11049,
         "exited": false
     },
-    "m_SelectedPriority": 0,
+    "m_SelectedPriority": 1,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "R3CM80B4SLB",
-            "name": "com.microsoft.launcher",
-            "processId": 18772,
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 17287,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 18832,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 20794,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 21710,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 7244,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CM80B4SLB",
+            "name": "com.Eunho.AREscapeRoomCafe",
+            "processId": 9292,
             "exited": false
         },
         {
             "deviceId": "R3CM80B4SLB",
             "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 7185,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 8622,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 9171,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 15753,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 18921,
-            "exited": true
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 20065,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 20770,
-            "exited": false
-        },
-        {
-            "deviceId": "R3CM80B4SLB",
-            "name": "com.Eunho.AREscapeRoomCafe",
-            "processId": 27523,
+            "processId": 11049,
             "exited": false
         }
     ],
@@ -71,7 +59,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -87,7 +75,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
